@@ -10,8 +10,8 @@
 }
 
 .testimonial-text {
-  font-size: small;
-  width: 50%;
+  font-size: 17px;
+ 
 }
 
 .testimonial-quote {
@@ -124,7 +124,7 @@
     width: 100%;
     min-height: 600px;
     padding: 40px 20px;
-    background-image: url("/Rectangle\ \(1\).png");
+    background-image: url("assets/Rectangle\ \(1\).png");
     overflow: visible;
     z-index: 2;
   }
@@ -148,7 +148,10 @@
     -webkit-text-stroke: 1px white;
     -webkit-text-fill-color: transparent;
   }
-
+.understanding-header {
+  display: flex;
+ flex-direction: column
+}
   .feature-list {
     list-style: none;
     padding: 0;
@@ -211,6 +214,9 @@
     font-size: 28px;
     margin-bottom: 30px;
   }
+  .carousel-button{
+    display: none;
+  }
 
   .feature-title {
     font-size: 20px;
@@ -250,15 +256,22 @@
   }
 
   .testimonial-content {
-    width: 100%;
+    width: 110%;
     height: 400px;
     display: flex;
+    box-sizing: border-box;
+    padding: 1rem;
     flex-direction: column;
     box-sizing: border-box;
     padding: 1rem;
     justify-content: center;
     align-items: center;
   }
+  .testimonial-text {
+  font-size: 17px;
+ width: 70%;
+ margin: 0 auto;
+}
 
   .play-button-hidden {
     position: absolute;
@@ -276,3 +289,74 @@
     display: none;
   }
 }
+
+/* Modern Scrollbar Styles */
+/* For Webkit browsers (Chrome, Safari, newer versions of Opera) */
+::-webkit-scrollbar {
+    width: 8px; /* Width of vertical scrollbar */
+    height: 8px; /* Height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light grey track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #40b093; /* Your theme green color */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1b4d3e; /* Darker shade on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #bdbdbd #f1f1f1;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .scroll-container {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    .scroll-container::-webkit-scrollbar {
+        display: none;  /* Chrome, Safari and Opera */
+    }
+}
+
+/* Smooth Scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom class for elements that should have the visible scrollbar */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #6e6e6e #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #565656;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #696969;
+}
+

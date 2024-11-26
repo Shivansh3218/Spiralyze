@@ -348,20 +348,32 @@ select::-ms-expand {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
     sans-serif;
 }
-
+.understanding-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between ;
+  margin-bottom: 40px
+}
+#we-understand-line {
+  width: 60%;
+  height: 2px;
+  background-color: #40b093;
+  margin-right: 20px;
+}
 /* Title styles */
 .understanding-title {
   font-size: 48px;
   font-weight: 700;
-  margin-bottom: 40px;
   letter-spacing: -0.5px;
   line-height: 1.2;
+  color: #333333;
 }
 
 .understanding-title-outline,
 .organize-title-we,
 #watch-text-video {
   -webkit-text-stroke: 1px #000;
+
   -webkit-text-fill-color: transparent;
 }
 
@@ -396,18 +408,21 @@ select::-ms-expand {
   display: inline-block;
   text-decoration: none;
   color: #2dd4bf;
+  width: 100%;
   border: 2px solid #2dd4bf;
-  border-radius: 8px;
+  border-radius: 3px;
   padding: 15px 30px;
   font-size: 20px;
   font-weight: 500;
   transition: all 0.3s ease;
   text-align: center;
+
+  transform: translateY(0); /* Initial position */
 }
 
 .success-rate-button:hover {
-  background-color: #2dd4bf;
-  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .success-rate-button::after {
@@ -477,8 +492,8 @@ select::-ms-expand {
 }
 
 .testimonial-image {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 30px 0 0 10px;
 }
@@ -519,8 +534,9 @@ select::-ms-expand {
 .carousel-nav {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
   margin-top: 20px;
+  margin: 0 auto;
 }
 
 .nav-dot {
@@ -534,7 +550,11 @@ select::-ms-expand {
   padding: 0;
 }
 
-.active-link{
+.nav-dot.active {
+    background: #40b093;
+}
+
+.active-link {
   text-decoration: underline;
   font-weight: bolder;
 }
@@ -610,7 +630,8 @@ select::-ms-expand {
 
 .organize-intro-text {
   color: #666;
-  line-height: 1.6;
+  line-height: 24px;
+  font-size: 16px;
 }
 
 .organize-services {
